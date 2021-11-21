@@ -12,7 +12,7 @@ const Characters = ({ tab, setTab }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:3000/characters?limit=${limit}&name=${character}&skip=${skip}`
+        `https://backendmarvelok.herokuapp.com/characters?limit=${limit}&name=${character}&skip=${skip}`
       );
 
       setData(response.data);

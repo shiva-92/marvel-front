@@ -12,7 +12,7 @@ const Comics = ({ tab, setTab }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:3000/comics?title=${comic}&limit=${limit}&skip=${skip}` //au lieu d'entrer en dur t'entre en stat
+        `https://backendmarvelok.herokuapp.com/comics?title=${comic}&limit=${limit}&skip=${skip}` //au lieu d'entrer en dur t'entre en stat
       );
 
       setData(response.data);

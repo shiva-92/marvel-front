@@ -17,7 +17,9 @@ const Id = () => {
   console.log(id);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`http://localhost:3000/id?id=${id}`);
+      const response = await axios.get(
+        `https://backendmarvelok.herokuapp.com/id?id=${id}`
+      );
       setData(response.data);
       setIsLoading(false);
       console.log(response.data);
