@@ -8,14 +8,14 @@ import Favoris from "./Favoris";
 import Header from "./Header";
 
 function App() {
-  const initialtab = localStorage.getItem("prenom")
-    ? JSON.parse(localStorage.getItem("prenom"))
+  const initialtab = localStorage.getItem("favorite")
+    ? JSON.parse(localStorage.getItem("favorite"))
     : [];
 
   //(1)
   const [tab, setTab] = useState(initialtab);
   //tab=[]
-  localStorage.setItem("prenom", JSON.stringify(tab));
+  localStorage.setItem("favorite", JSON.stringify(tab));
   return (
     <Router>
       <Header />

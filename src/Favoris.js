@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Favoris = ({ tab, setTab }) => {
-  const saved = localStorage.getItem("prenom");
+  const saved = localStorage.getItem("favorite");
   const initialValue = JSON.parse(saved);
   console.log(saved);
 
