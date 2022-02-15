@@ -1,23 +1,70 @@
 /* Other rules */
 
+* {
+  font-family: "Helvetica";
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
-  background-color: pink;
-  border: 3px black solid;
+  margin-left: 10px;
+  margin-right: 10px;
+
   justify-content: space-between;
 }
 
 .group {
   display: flex;
   flex-direction: column;
-  background-color: yellow;
   justify-content: space-between;
-  width: 24%;
-  height: 350px;
-  border: blue 1px solid;
+  width: 15%;
+  height: 500px;
   position: relative;
+  margin-bottom: 50px;
+  background-color: yellow;
+}
+
+.charactertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.descriptioncharacter {
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 500px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.charactername {
+  font-size: x-large;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.ensavoirplus {
+  background-color: red;
+  position: absolute;
+  margin-top: 35px;
+  text-align: left;
+  height: 30px;
+  width: 150px;
+  margin-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
 }
 
 .character {
@@ -30,25 +77,30 @@
 
 .picturecharacter {
   width: 100%;
+  object-fit: cover;
+  height: 500px;
 }
 
-/* .coeur {
-  background-color: red;
-  width: 100%;
-} */
-
-.descriptioncharacter {
-  width: 100%;
-  background-color: blue;
+.closebutton {
+  background-color: close;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 35px;
+  text-align: left;
+  height: 30px;
+  width: 100px;
+  margin-left: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .favoritebouton {
   width: 35px;
   height: 35px;
   position: absolute;
-  margin-left: 325px;
+  margin-left: 290px;
+  margin-top: 35px;
+  position: absolute;
+  z-index: 2;
 }
 
 :hover.favoritebouton {

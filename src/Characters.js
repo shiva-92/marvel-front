@@ -75,26 +75,30 @@ const Characters = ({ tab, setTab }) => {
               <>
                 {/* //groupe = chaque case avec un perso */}
                 <div className="group">
-                  <button
-                    className="okbutton"
-                    onClick={() => {
-                      const newtab = [...tab];
-                      newtab.push({
-                        character: character._id,
-                        description: character.description,
-                        picturepath: character.thumbnail.path,
-                        picturextension: character.thumbnail.extension,
-                      });
-                      setTab(newtab);
-                      console.log(newtab);
-                    }}
-                  >
-                    ajouter en favori
-                  </button>
-
                   <div className="charactercontainer">
                     <div className="charactertext">
-                      <span>{character.name}</span>
+                      <button
+                        className="favoritebouton"
+                        onClick={() => {
+                          const newtab = [...tab];
+                          newtab.push({
+                            character: character._id,
+                            description: character.description,
+                            picturepath: character.thumbnail.path,
+                            picturextension: character.thumbnail.extension,
+                          });
+                          setTab(newtab);
+                          console.log(newtab);
+                        }}
+                      >
+                        <FontAwesomeIcon
+                          className="coeur"
+                          icon={faHeart}
+                          size="2x"
+                        ></FontAwesomeIcon>
+                      </button>
+
+                      <span className="charactername">{character.name}</span>
 
                       {character.description && (
                         <button
@@ -121,8 +125,12 @@ const Characters = ({ tab, setTab }) => {
                         )
                           return (
                             <>
-                              <span>{character.description}</span>
+                              <div className="descriptioncharacter">
+                                {character.description}
+                              </div>
+
                               <button
+                                className="closebutton"
                                 onClick={() => {
                                   const newtabdetailperso = [...tabdetailperso];
                                   newtabdetailperso[index].croixvalue =
@@ -136,27 +144,6 @@ const Characters = ({ tab, setTab }) => {
                           );
                       })}
                     </div>
-
-                    {/* <button
-                      className="favoritebouton"
-                      onClick={() => {
-                        const newtab = [...tab];
-                        newtab.push({
-                          character: character._id,
-                          description: character.description,
-                          picturepath: character.thumbnail.path,
-                          picturextension: character.thumbnail.extension,
-                        });
-                        setTab(newtab);
-                        console.log(newtab);
-                      }}
-                    >
-                      <FontAwesomeIcon
-                        className="coeur"
-                        icon={faHeart}
-                        size="2x"
-                      ></FontAwesomeIcon>
-                    </button> */}
                   </div>
 
                   {/* //tu vas faire ca à chaque case */}
