@@ -2,25 +2,57 @@
 
 .container {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   margin-top: 30px;
+  background-color: pink;
+  border: 3px black solid;
+  justify-content: space-between;
 }
+
+.group {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  justify-content: space-between;
+  width: 24%;
+  height: 350px;
+  border: blue 1px solid;
+  position: relative;
+}
+
 .character {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin-right: 20px;
   margin-bottom: 20px;
+  background-color: red;
+  width: 100%;
 }
 
-.ok {
-  width: 400px;
+.picturecharacter {
+  width: 100%;
 }
 
-.okbutton {
-  width: 200px;
-  border: 1px black solid;
+/* .coeur {
+  background-color: red;
+  width: 100%;
+} */
+
+.descriptioncharacter {
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  margin-top: 250px;
+}
+
+.favoritebouton {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  margin-left: 325px;
+}
+
+:hover.favoritebouton {
+  background-color: red;
 }
 
 .comic {
@@ -78,16 +110,11 @@ img {
   justify-content: space-around;
   height: 50px;
   margin-top: 20px;
+  background-color: yellow;
 }
 
 input {
   width: 200px;
-}
-
-.group {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }
 
 .favori {

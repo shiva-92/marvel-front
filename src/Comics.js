@@ -20,7 +20,7 @@ const Comics = ({ tab, setTab }) => {
       setIsLoading(false);
     }; // on a definit fonction fetchdata dans laquelle on demande à executer l'interieur d'une fonction
     fetchData();
-  }, [comic, limit, skip]);
+  }, [comic, limit, skip]); //y'a une valeur qui prends dans le state, execute ce qu'il a l'interieur de useeffect, t
 
   return isLoading ? (
     <span>En cours de chargement... </span>

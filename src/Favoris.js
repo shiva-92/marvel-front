@@ -13,7 +13,7 @@ const Favoris = ({ tab, setTab }) => {
         {initialValue.map((elem, index) => {
           return (
             <>
-              <div className="favori">
+              <div className="favori" key={index}>
                 {elem.character ? (
                   <span>{elem.character}</span>
                 ) : (
