@@ -31,25 +31,31 @@ const Id = () => {
     <span>En cours de chargement... </span>
   ) : (
     <>
-      <>
-        {data.comics.map((comicapparition, index) => {
-          return (
-            <>
-              <div className="containerid">
-                <span>{comicapparition.title}</span>
-                <img
-                  src={
-                    comicapparition.thumbnail.path +
-                    `.` +
-                    comicapparition.thumbnail.extension
-                  }
-                />
-                <span>{comicapparition.description}</span>
-              </div>
-            </>
-          );
-        })}
-      </>
+      <div className="container">
+        <>
+          {data.comics.map((comicapparition, index) => {
+            return (
+              <>
+                <div className="groupid">
+                  <div className="leftbloc">
+                    <span>{comicapparition.title}</span>
+                    <img
+                      className="piccomicrelated"
+                      src={
+                        comicapparition.thumbnail.path +
+                        `.` +
+                        comicapparition.thumbnail.extension
+                      }
+                    />
+                  </div>
+
+                  <div>{comicapparition.description}</div>
+                </div>
+              </>
+            );
+          })}
+        </>
+      </div>
     </>
   );
 };
