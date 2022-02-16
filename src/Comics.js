@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Comics = ({ tab, setTab }) => {
   const [data, setData] = useState({});
@@ -8,6 +10,19 @@ const Comics = ({ tab, setTab }) => {
   const [comic, setComic] = useState("");
   const [limit, setLimit] = useState(100);
   const [skip, setSkip] = useState(0);
+  const [tabdetailcomic, setTabdetailcomic] = useState([]);
+
+  const handleTabcomic = (comic) => {
+    const newtabdetailcomic = [...tabdetailcomic];
+
+    newtabdetailcomic.push({
+      comicidentifiant: comic._id,
+      comicdetail: comic.description,
+      croixvalue: true,
+    });
+
+    setTabdetailcomic(newtabdetailcomic);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,9 +62,9 @@ const Comics = ({ tab, setTab }) => {
           {data.results.map((comic, index) => {
             return (
               <>
-                <div className="group">
+                <div className="groupcomic">
                   <button
-                    className="okbutton"
+                    className="favoritebouton"
                     onClick={() => {
                       const newtab = [...tab];
                       newtab.push({
@@ -62,16 +77,56 @@ const Comics = ({ tab, setTab }) => {
                       console.log(newtab);
                     }}
                   >
-                    ajouter en favori
+                    <FontAwesomeIcon
+                      className="coeur"
+                      icon={faHeart}
+                      size="2x"
+                    ></FontAwesomeIcon>
                   </button>
-                </div>
-                <div className="comic">
-                  <span>{comic.title}</span>
+
+                  <span className="comictitle">{comic.title}</span>
+
+                  <button
+                    className="ensavoirplus"
+                    onClick={() => {
+                      //tu alimentes tableaufavori state (variable) avec id du perso favori
+                      handleTabcomic(comic);
+                    }}
+                  >
+                    En savoir plus
+                    {/* //en cliquant en savoir plus sur le character tu alimtes un tableau et tu map dessus */}
+                  </button>
+
+                  {tabdetailcomic.map((comiccharacter, index) => {
+                    if (
+                      comic._id === comiccharacter.comicidentifiant &&
+                      tabdetailcomic[index].croixvalue
+                    )
+                      return (
+                        <>
+                          <div className="comicdescription">
+                            {comic.description}
+                          </div>
+
+                          <button
+                            className="closebutton"
+                            onClick={() => {
+                              const newtabdetailcomic = [...tabdetailcomic];
+                              newtabdetailcomic[index].croixvalue =
+                                !newtabdetailcomic[index].croixvalue;
+                              setTabdetailcomic(newtabdetailcomic);
+                            }}
+                          >
+                            close
+                          </button>
+                        </>
+                      );
+                  })}
+
                   <img
                     className="imagecomic"
                     src={comic.thumbnail.path + `.` + comic.thumbnail.extension}
                   />
-                  <span>{comic.description}</span>
                 </div>
               </>
             );

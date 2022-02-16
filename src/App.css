@@ -22,7 +22,16 @@
   height: 500px;
   position: relative;
   margin-bottom: 50px;
-  background-color: yellow;
+}
+
+.groupcomic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15%;
+  height: 500px;
+  position: relative;
+  margin-bottom: 100px;
 }
 
 .charactertext {
@@ -116,10 +125,6 @@
   margin-right: 20px;
 }
 
-.imagecomic {
-  width: 400px;
-}
-
 .headerrightpart {
   width: 60%;
   margin: 0 auto;
@@ -183,4 +188,28 @@ input {
 .containerid {
   display: flex;
   flex-direction: column;
+}
+
+.comictitle {
+  font-size: large;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.imagecomic {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+
+.comicdescription {
+  height: 500px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: large;
 }
