@@ -82,6 +82,7 @@ const Characters = ({ tab, setTab }) => {
                         onClick={() => {
                           const newtab = [...tab];
                           newtab.push({
+                            charactername: character.name,
                             character: character._id,
                             description: character.description,
                             picturepath: character.thumbnail.path,

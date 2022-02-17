@@ -25,17 +25,25 @@ const Favoris = ({ tab, setTab }) => {
                   />
                 )}
 
-                {elem.character ? (
-                  <span>{elem.character}</span>
-                ) : (
-                  <span>{elem.caractereok}</span>
-                )}
+                <div className="rightblocfavorite">
+                  {elem.character ? (
+                    <div className="favoritecharactername">
+                      {elem.charactername}
+                    </div>
+                  ) : (
+                    <div className="favoritecomictitle">{elem.comicname}</div>
+                  )}
 
-                {elem.description ? (
-                  <span>{elem.description}</span>
-                ) : (
-                  <span>{elem.descriptionok}</span>
-                )}
+                  {elem.description ? (
+                    <div className="favoritecharacterdescription">
+                      {elem.description}
+                    </div>
+                  ) : (
+                    <div className="favoritecomicdescription">
+                      {elem.descriptionok}
+                    </div>
+                  )}
+                </div>
               </div>
             </>
           );

@@ -270,3 +270,24 @@ input {
   height: 300px;
   border: 5px solid black;
 }
+
+.favoritecharactername {
+  background-color: red;
+}
+
+.favoritecomictitle {
+  background-color: red;
+}
+
+.favoritecharacterdescription {
+  background-color: purple;
+}
+
+.favoritecomicdescription {
+  background-color: purple;
+}
+
+.rightblocfavorite {
+  height: 100%;
+  background-color: green;
+}

@@ -68,6 +68,7 @@ const Comics = ({ tab, setTab }) => {
                     onClick={() => {
                       const newtab = [...tab];
                       newtab.push({
+                        comicname: comic.title,
                         characterok: comic._id,
                         descriptionok: comic.description,
                         picturepathok: comic.thumbnail.path,
