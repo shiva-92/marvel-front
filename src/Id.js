@@ -20,6 +20,7 @@ const Id = () => {
       const response = await axios.get(
         `https://backendmarvelok.herokuapp.com/id?id=${id}`
       );
+      //on met dans la variable data via setData, le json
       setData(response.data);
       setIsLoading(false);
       console.log(response.data);
@@ -31,6 +32,15 @@ const Id = () => {
     <span>En cours de chargement... </span>
   ) : (
     <>
+      <div className="amountcomicrelated">
+        {/* //a l'interieur de data le contenu json */}
+        <span></span>
+        {`${data.name}` +
+          ` apparaît dans ` +
+          `${data.comics.length}` +
+          ` comics !`}
+      </div>
+
       <div className="container">
         <>
           {data.comics.map((comicapparition, index) => {
@@ -38,7 +48,6 @@ const Id = () => {
               <>
                 <div className="groupid">
                   <div className="leftbloc">
-                    <span>{comicapparition.title}</span>
                     <img
                       className="piccomicrelated"
                       src={
@@ -49,7 +58,15 @@ const Id = () => {
                     />
                   </div>
 
-                  <div>{comicapparition.description}</div>
+                  <div className="rightbloc">
+                    <div className="titlecomicrelated">
+                      {comicapparition.title}
+                    </div>
+
+                    <div className="descriptioncomicrelated">
+                      {comicapparition.description}
+                    </div>
+                  </div>
                 </div>
               </>
             );
