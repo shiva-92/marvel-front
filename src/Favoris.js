@@ -14,18 +14,23 @@ const Favoris = ({ tab, setTab }) => {
           return (
             <>
               <div className="favori" key={index}>
-                {elem.character ? (
-                  <span>{elem.character}</span>
-                ) : (
-                  <span>{elem.caractereok}</span>
-                )}
                 {elem.picturepath ? (
-                  <img src={elem.picturepath + `.` + elem.picturextension} />
+                  <img
+                    className="imagefavorite"
+                    src={elem.picturepath + `.` + elem.picturextension}
+                  />
                 ) : (
                   <img
                     src={elem.picturepathok + `.` + elem.picturextensionok}
                   />
                 )}
+
+                {elem.character ? (
+                  <span>{elem.character}</span>
+                ) : (
+                  <span>{elem.caractereok}</span>
+                )}
+
                 {elem.description ? (
                   <span>{elem.description}</span>
                 ) : (
