@@ -10,45 +10,48 @@ const Favoris = ({ tab, setTab }) => {
   return (
     <>
       <div className="divfavori">
-        {initialValue.map((elem, index) => {
-          return (
-            <>
-              <div className="favori" key={index}>
-                {elem.picturepath ? (
-                  <img
-                    className="imagefavorite"
-                    src={elem.picturepath + `.` + elem.picturextension}
-                  />
-                ) : (
-                  <img
-                    className="imagefavorite"
-                    src={elem.picturepathok + `.` + elem.picturextensionok}
-                  />
-                )}
+        <div className="globalfavori">
+          {initialValue.map((elem, index) => {
+            return (
+              <>
+                <div className="favori" key={index}>
+                  {elem.picturepath ? (
+                    <img
+                      className="imagefavorite"
+                      src={elem.picturepath + `.` + elem.picturextension}
+                    />
+                  ) : (
+                    <img
+                      className="imagefavorite"
+                      src={elem.picturepathok + `.` + elem.picturextensionok}
+                    />
+                  )}
 
-                {elem.character ? (
-                  <div className="favoritecharactername">
-                    {elem.charactername}
-                  </div>
-                ) : (
-                  <div className="favoritecomictitle">{elem.comicname}</div>
-                )}
-                <button
-                  onClick={() => {
-                    const newtab = [...tab];
-                    newtab.splice(newtab.indexOf(newtab[index]), 1);
-                    //tab[i]le contenu pris par i dans le tableau
+                  {elem.character ? (
+                    <div className="favoritecharactername">
+                      {elem.charactername}
+                    </div>
+                  ) : (
+                    <div className="favoritecomictitle">{elem.comicname}</div>
+                  )}
+                  <button
+                    className="deletefavorite"
+                    onClick={() => {
+                      const newtab = [...tab];
+                      newtab.splice(newtab.indexOf(newtab[index]), 1);
+                      //tab[i]le contenu pris par i dans le tableau
 
-                    setTab(newtab);
-                    // console.log(tabdetailperso);
-                  }}
-                >
-                  close
-                </button>
-              </div>
-            </>
-          );
-        })}
+                      setTab(newtab);
+                      // console.log(tabdetailperso);
+                    }}
+                  >
+                    Supprimer
+                  </button>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );
