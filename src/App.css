@@ -355,3 +355,9 @@ img {
   padding-left: 50px;
   padding-right: 50px;
 }
+
+.nextpage {
+  background-color: transparent;
+  color: red;
+  border: none;
+}

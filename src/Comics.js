@@ -42,7 +42,7 @@ const Comics = ({ tab, setTab }) => {
   ) : (
     <>
       <div className="soussection">
-        {skip - 100 == 0 && (
+        {skip - 100 >= 0 && (
           <button
             onClick={() => {
               setSkip(skip - 100);
