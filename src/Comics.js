@@ -42,6 +42,16 @@ const Comics = ({ tab, setTab }) => {
   ) : (
     <>
       <div className="soussection">
+        {skip - 100 == 0 && (
+          <button
+            onClick={() => {
+              setSkip(skip - 100);
+              console.log(skip);
+            }}
+          >
+            Page précédente
+          </button>
+        )}
         <input
           placeholder="Cherche ton comic favori !"
           onChange={(event) => {
@@ -118,7 +128,7 @@ const Comics = ({ tab, setTab }) => {
                               setTabdetailcomic(newtabdetailcomic);
                             }}
                           >
-                            close
+                            Fermer
                           </button>
                         </>
                       );

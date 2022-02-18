@@ -49,6 +49,17 @@ const Characters = ({ tab, setTab }) => {
   ) : (
     <>
       <div className="soussection">
+        {/* //skip c'est la quantité */}
+        {skip - 100 == 0 && (
+          <button
+            onClick={() => {
+              setSkip(skip - 100);
+            }}
+          >
+            Page précédente
+          </button>
+        )}
+
         <input
           placeholder="Cherche ton super-héros favori !"
           onChange={(event) => {
@@ -71,6 +82,8 @@ const Characters = ({ tab, setTab }) => {
           {/* //n'oublie pas de penser en json tt le temps, tu dois reconsiderer chaque chaque case et check la conditionnelle */}
 
           {data.results.map((character, index) => {
+            console.log(skip);
+
             return (
               <>
                 {/* //groupe = chaque case avec un perso */}
@@ -139,7 +152,7 @@ const Characters = ({ tab, setTab }) => {
                                   setTabdetailperso(newtabdetailperso);
                                 }}
                               >
-                                close
+                                Fermer
                               </button>
                             </>
                           );
