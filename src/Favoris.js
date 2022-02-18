@@ -21,29 +21,30 @@ const Favoris = ({ tab, setTab }) => {
                   />
                 ) : (
                   <img
+                    className="imagefavorite"
                     src={elem.picturepathok + `.` + elem.picturextensionok}
                   />
                 )}
 
-                <div className="rightblocfavorite">
-                  {elem.character ? (
-                    <div className="favoritecharactername">
-                      {elem.charactername}
-                    </div>
-                  ) : (
-                    <div className="favoritecomictitle">{elem.comicname}</div>
-                  )}
+                {elem.character ? (
+                  <div className="favoritecharactername">
+                    {elem.charactername}
+                  </div>
+                ) : (
+                  <div className="favoritecomictitle">{elem.comicname}</div>
+                )}
+                <button
+                  onClick={() => {
+                    const newtab = [...tab];
+                    newtab.splice(newtab.indexOf(newtab[index]), 1);
+                    //tab[i]le contenu pris par i dans le tableau
 
-                  {elem.description ? (
-                    <div className="favoritecharacterdescription">
-                      {elem.description}
-                    </div>
-                  ) : (
-                    <div className="favoritecomicdescription">
-                      {elem.descriptionok}
-                    </div>
-                  )}
-                </div>
+                    setTab(newtab);
+                    // console.log(tabdetailperso);
+                  }}
+                >
+                  close
+                </button>
               </div>
             </>
           );

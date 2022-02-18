@@ -260,34 +260,49 @@ input {
 .divfavori {
   background-color: yellow;
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 80px auto 30px;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .favori {
-  width: 60%;
-  margin: 0 auto;
   display: flex;
-  margin-bottom: 20px;
-  height: 300px;
-  border: 5px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 500px;
+  position: relative;
+  margin-bottom: 100px;
+  border: 3px solid black;
+  margin-right: 20px;
+  font-weight: bold;
 }
 
 .favoritecharactername {
   background-color: red;
+  font-size: x-large;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }
 
 .favoritecomictitle {
   background-color: red;
+  font-size: x-large;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
 }
 
-.favoritecharacterdescription {
-  background-color: purple;
-}
-
-.favoritecomicdescription {
-  background-color: purple;
-}
-
-.rightblocfavorite {
-  height: 100%;
-  background-color: green;
+.imagefavorite {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
 }
