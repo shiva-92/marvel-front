@@ -4,7 +4,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 const Characters = ({ tab, setTab }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -52,31 +52,65 @@ const Characters = ({ tab, setTab }) => {
       <div className="soussection">
         {/* //skip c'est la quantité */}
 
-        {skip - 100 >= 0 && (
-          <button
-            onClick={() => {
-              setSkip(skip - 100);
-            }}
-          >
-            Page précédente
-          </button>
-        )}
+        <div className="centersoussection">
+          {skip - 100 >= 0 && (
+            <>
+              <button
+                className="previouspage"
+                onClick={() => {
+                  setSkip(skip - 100);
+                }}
+              >
+                <FontAwesomeIcon icon={faAngleLeft} size="3x" />
+              </button>
+              <span className="textpreviouspage">PAGE PRECEDENTE</span>
+            </>
+          )}
 
-        <input
-          placeholder="Cherche ton super-héros favori !"
-          onChange={(event) => {
-            setCharacter(event.target.value);
-          }}
-        ></input>
+          {skip - 100 < 0 ? (
+            <input
+              className="nopreviousinput"
+              placeholder="Cherche ton super-héros favori !"
+              onChange={(event) => {
+                setCharacter(event.target.value);
+              }}
+            ></input>
+          ) : (
+            <input
+              className="previousinput"
+              placeholder="Cherche ton super-héros favori !"
+              onChange={(event) => {
+                setCharacter(event.target.value);
+              }}
+            ></input>
+          )}
 
-        <button
-          className="nextpage"
-          onClick={() => {
-            setSkip(skip + 100);
-          }}
-        >
-          <FontAwesomeIcon icon={faAngleRight} size="3x" />
-        </button>
+          {skip - 100 < 0 ? (
+            <>
+              <button
+                className="nextpageinitial"
+                onClick={() => {
+                  setSkip(skip + 100);
+                }}
+              >
+                <FontAwesomeIcon icon={faAngleRight} size="3x" />
+              </button>
+              <span className="firstpagetext">PAGE SUIVANTE</span>
+            </>
+          ) : (
+            <>
+              <button
+                className="nextpagenormal"
+                onClick={() => {
+                  setSkip(skip + 100);
+                }}
+              >
+                <FontAwesomeIcon icon={faAngleRight} size="3x" />
+              </button>
+              <span className="firstpagetext">PAGE SUIVANTE</span>
+            </>
+          )}
+        </div>
       </div>
 
       <div className="container">

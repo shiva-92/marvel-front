@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Comics = ({ tab, setTab }) => {
   const [data, setData] = useState({});
@@ -44,12 +46,13 @@ const Comics = ({ tab, setTab }) => {
       <div className="soussection">
         {skip - 100 >= 0 && (
           <button
+            className="previouspage"
             onClick={() => {
               setSkip(skip - 100);
               console.log(skip);
             }}
           >
-            Page précédente
+            <FontAwesomeIcon icon={faAngleLeft} size="3x" />
           </button>
         )}
         <input
@@ -59,11 +62,12 @@ const Comics = ({ tab, setTab }) => {
           }}
         ></input>
         <button
+          className="nextpage"
           onClick={() => {
             setSkip(skip + 100);
           }}
         >
-          page suivante
+          <FontAwesomeIcon icon={faAngleRight} size="3x" />
         </button>
       </div>
 

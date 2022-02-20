@@ -14,27 +14,30 @@ const Header = ({ token, setUser, title, setTitle }) => {
 
         <div className="headerrightpart">
           <button
+            className="characters"
             onClick={() => {
               navigate("/");
             }}
           >
-            Personnages
+            PERSONNAGES
           </button>
 
           <button
+            className="comics"
             onClick={() => {
               navigate("/comics");
             }}
           >
-            Comics
+            COMICS
           </button>
 
           <button
+            className="favorites"
             onClick={() => {
               navigate("/favoris");
             }}
           >
-            Favoris
+            FAVORIS
           </button>
         </div>
       </div>
