@@ -67,49 +67,25 @@ const Characters = ({ tab, setTab }) => {
             </>
           )}
 
-          {skip - 100 < 0 ? (
-            <input
-              className="nopreviousinput"
-              placeholder="Cherche ton super-héros favori !"
-              onChange={(event) => {
-                setCharacter(event.target.value);
-              }}
-            ></input>
-          ) : (
-            <input
-              className="previousinput"
-              placeholder="Cherche ton super-héros favori !"
-              onChange={(event) => {
-                setCharacter(event.target.value);
-              }}
-            ></input>
-          )}
+          <input
+            className="nopreviousinput"
+            placeholder="Cherche ton super-héros favori !"
+            onChange={(event) => {
+              setCharacter(event.target.value);
+            }}
+          ></input>
 
-          {skip - 100 < 0 ? (
-            <>
-              <button
-                className="nextpageinitial"
-                onClick={() => {
-                  setSkip(skip + 100);
-                }}
-              >
-                <FontAwesomeIcon icon={faAngleRight} size="3x" />
-              </button>
-              <span className="firstpagetext">PAGE SUIVANTE</span>
-            </>
-          ) : (
-            <>
-              <button
-                className="nextpagenormal"
-                onClick={() => {
-                  setSkip(skip + 100);
-                }}
-              >
-                <FontAwesomeIcon icon={faAngleRight} size="3x" />
-              </button>
-              <span className="firstpagetext">PAGE SUIVANTE</span>
-            </>
-          )}
+          <>
+            <button
+              className="nextpageinitial"
+              onClick={() => {
+                setSkip(skip + 100);
+              }}
+            >
+              <FontAwesomeIcon icon={faAngleRight} size="3x" />
+            </button>
+            <span className="firstpagetext">PAGE SUIVANTE</span>
+          </>
         </div>
       </div>
 

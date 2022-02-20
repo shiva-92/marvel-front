@@ -9,7 +9,14 @@ const Header = ({ token, setUser, title, setTitle }) => {
     <>
       <div className="globalheader">
         <div className="headerlogo">
-          <img src={logo} />
+          <button
+            className="boutonlogo"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <img src={logo} />
+          </button>
         </div>
 
         <div className="headerrightpart">

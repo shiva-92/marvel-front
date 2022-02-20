@@ -44,31 +44,41 @@ const Comics = ({ tab, setTab }) => {
   ) : (
     <>
       <div className="soussection">
-        {skip - 100 >= 0 && (
-          <button
-            className="previouspage"
-            onClick={() => {
-              setSkip(skip - 100);
-              console.log(skip);
+        <div className="centersoussection">
+          {skip - 100 >= 0 && (
+            <>
+              <button
+                className="previouspage"
+                onClick={() => {
+                  setSkip(skip - 100);
+                  console.log(skip);
+                }}
+              >
+                <FontAwesomeIcon icon={faAngleLeft} size="3x" />
+              </button>
+              <span className="textpreviouspage">PAGE PRECEDENTE</span>
+            </>
+          )}
+          <input
+            className="nopreviousinput"
+            placeholder="Cherche ton comic favori !"
+            onChange={(event) => {
+              setComic(event.target.value);
             }}
-          >
-            <FontAwesomeIcon icon={faAngleLeft} size="3x" />
-          </button>
-        )}
-        <input
-          placeholder="Cherche ton comic favori !"
-          onChange={(event) => {
-            setComic(event.target.value);
-          }}
-        ></input>
-        <button
-          className="nextpage"
-          onClick={() => {
-            setSkip(skip + 100);
-          }}
-        >
-          <FontAwesomeIcon icon={faAngleRight} size="3x" />
-        </button>
+          ></input>
+
+          <>
+            <button
+              className="nextpageinitial"
+              onClick={() => {
+                setSkip(skip + 100);
+              }}
+            >
+              <FontAwesomeIcon icon={faAngleRight} size="3x" />
+            </button>
+            <span className="firstpagetext">PAGE SUIVANTE</span>
+          </>
+        </div>
       </div>
 
       <div className="container">
