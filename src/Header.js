@@ -19,7 +19,7 @@ const Header = ({ token, setUser, title, setTitle }) => {
           </button>
         </div>
 
-        <div className="headerrightpart">
+        <div className="boutonsheader">
           <button
             className="characters"
             onClick={() => {

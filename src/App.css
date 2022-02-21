@@ -2,6 +2,110 @@
   font-family: "Helvetica";
 }
 
+/*HEADER*/
+
+.globalheader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 1px grey;
+}
+
+.boutonsheader {
+  width: 35%;
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  margin-left: 100px;
+}
+
+.characters,
+.comics,
+.favorites {
+  width: 160px;
+  height: 30px;
+  font-size: large;
+  height: 100%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 3px 0px black;
+}
+
+.headerlogo {
+  align-content: center;
+  width: 150px;
+  margin-left: 50px;
+}
+
+.boutonlogo {
+  background-color: transparent;
+  border: none;
+}
+
+.search {
+  right: 0;
+  top: 0;
+  width: 680px;
+  display: flex;
+  height: 120px;
+  z-index: 3;
+  position: fixed;
+  justify-items: flex-end;
+}
+
+.input {
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: medium;
+  border: 3px solid black;
+  height: 30px;
+  margin-left: 200px;
+  margin-right: 100px;
+  margin-top: 40px;
+}
+
+.nextpage {
+  color: red;
+  border: none;
+  margin-top: 45px;
+  margin-left: 465px;
+  width: 150px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+}
+
+.previouspage {
+  color: red;
+  border: none;
+  margin-top: 45px;
+  margin-left: 20px;
+  width: 170px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+}
+
+.textpreviouspage {
+  margin-top: 55px;
+  margin-left: 55px;
+  width: 150px;
+  position: absolute;
+  font-size: x-small;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -31,113 +135,6 @@
   margin-bottom: 50px;
 }
 
-.characters,
-.comics,
-.favorites {
-  width: 220px;
-  height: 50px;
-  font-size: x-large;
-  height: 100%;
-  background-color: red;
-  color: white;
-  font-weight: bold;
-  box-shadow: 3px 3px 0px black;
-}
-
-.headerlogo {
-  align-content: center;
-  width: 150px;
-  margin-left: 50px;
-}
-
-.boutonlogo {
-  background-color: transparent;
-  border: none;
-}
-.headerrightpart {
-  width: 40%;
-  display: flex;
-  height: 80px;
-  justify-content: space-around;
-  margin-left: 200px;
-}
-
-.globalheader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  box-shadow: 1px 1px 1px grey;
-}
-
-.search {
-  right: 0;
-  top: 0;
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  height: 120px;
-  z-index: 3;
-  position: fixed;
-}
-
-.centersearch {
-  width: 100%;
-  margin-left: 0px;
-}
-
-.input {
-  width: 400px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: large;
-  border: 3px solid black;
-  height: 50px;
-  margin-left: 220px;
-  margin-right: 220px;
-  margin-top: 30px;
-}
-
-.nextpage {
-  background-color: transparent;
-  color: black;
-  border: none;
-  margin-top: 40px;
-  margin-left: -320px;
-  width: 300px;
-  position: absolute;
-}
-
-.previouspage {
-  background-color: transparent;
-  color: black;
-  border: none;
-  margin-top: 40px;
-  margin-left: 25px;
-  width: 300px;
-  position: absolute;
-}
-
-.firstpagetext {
-  margin-top: 50px;
-  margin-left: -140px;
-  width: 150px;
-  position: absolute;
-  font-size: small;
-}
-
-.textpreviouspage {
-  margin-top: 50px;
-  margin-left: 15px;
-  width: 150px;
-  position: absolute;
-  font-size: small;
-}
 .boutonfirstpage {
   margin-top: 50px;
   background-color: purple;
