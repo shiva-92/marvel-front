@@ -6,9 +6,15 @@ const Favoris = ({ tab, setTab }) => {
   const saved = localStorage.getItem("favorite");
   const initialValue = JSON.parse(saved);
   console.log(saved);
-
+  console.log(tab.length);
   return (
     <>
+      {tab.length == 0 && (
+        <div className="testfavori">
+          Vous n'avez actuellement aucun personnage ou comic en favori
+        </div>
+      )}
+
       <div className="divfavori">
         <div className="globalfavori">
           {initialValue.map((elem, index) => {
