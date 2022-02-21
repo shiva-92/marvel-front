@@ -89,13 +89,22 @@ const Comics = ({ tab, setTab }) => {
                     className="favoritebouton"
                     onClick={() => {
                       const newtab = [...tab];
-                      newtab.push({
-                        comicname: comic.title,
-                        characterok: comic._id,
-                        descriptionok: comic.description,
-                        picturepathok: comic.thumbnail.path,
-                        picturextensionok: comic.thumbnail.extension,
-                      });
+
+                      const exist = newtab.find(
+                        (element) => element.characterok === comic._id
+                      );
+
+                      if (exist) {
+                        alert("Ce comic a déjà été ajouté à vos favoris");
+                      } else {
+                        newtab.push({
+                          comicname: comic.title,
+                          characterok: comic._id,
+                          descriptionok: comic.description,
+                          picturepathok: comic.thumbnail.path,
+                          picturextensionok: comic.thumbnail.extension,
+                        });
+                      }
                       setTab(newtab);
                       console.log(newtab);
                     }}

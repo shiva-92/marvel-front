@@ -93,13 +93,24 @@ const Characters = ({ tab, setTab }) => {
                         className="favoritebouton"
                         onClick={() => {
                           const newtab = [...tab];
-                          newtab.push({
-                            charactername: character.name,
-                            character: character._id,
-                            description: character.description,
-                            picturepath: character.thumbnail.path,
-                            picturextension: character.thumbnail.extension,
-                          });
+
+                          const exist = newtab.find(
+                            (element) => element.character === character._id
+                          );
+
+                          if (exist) {
+                            alert(
+                              "Ce personnage a déjà été ajouté à vos favoris"
+                            );
+                          } else {
+                            newtab.push({
+                              charactername: character.name,
+                              character: character._id,
+                              description: character.description,
+                              picturepath: character.thumbnail.path,
+                              picturextension: character.thumbnail.extension,
+                            });
+                          }
                           setTab(newtab);
                           console.log(newtab);
                         }}
