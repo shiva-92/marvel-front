@@ -35,16 +35,15 @@ const Comics = ({ tab, setTab }) => {
       setData(response.data);
       console.log(response.data);
       setIsLoading(false);
-    }; // on a definit fonction fetchdata dans laquelle on demande à executer l'interieur d'une fonction
+    };
     fetchData();
-  }, [comic, limit, skip]); //y'a une valeur qui prends dans le state, execute ce qu'il a l'interieur de useeffect, t
-
+  }, [comic, limit, skip]);
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (
     <>
-      <div className="soussection">
-        <div className="centersoussection">
+      <div className="search">
+        <div className="centersearch">
           {skip - 100 >= 0 && (
             <>
               <button
@@ -60,7 +59,7 @@ const Comics = ({ tab, setTab }) => {
             </>
           )}
           <input
-            className="nopreviousinput"
+            className="input"
             placeholder="Cherche ton comic favori !"
             onChange={(event) => {
               setComic(event.target.value);
@@ -69,7 +68,7 @@ const Comics = ({ tab, setTab }) => {
 
           <>
             <button
-              className="nextpageinitial"
+              className="nextpage"
               onClick={() => {
                 setSkip(skip + 100);
               }}
@@ -114,12 +113,10 @@ const Comics = ({ tab, setTab }) => {
                   <button
                     className="ensavoirplus"
                     onClick={() => {
-                      //tu alimentes tableaufavori state (variable) avec id du perso favori
                       handleTabcomic(comic);
                     }}
                   >
                     En savoir plus
-                    {/* //en cliquant en savoir plus sur le character tu alimtes un tableau et tu map dessus */}
                   </button>
 
                   {tabdetailcomic.map((comiccharacter, index) => {

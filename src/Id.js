@@ -41,7 +41,7 @@ const Id = () => {
           ` comics !`}
       </div>
 
-      <div className="container">
+      <div className="containercomicrelated">
         <>
           {data.comics.map((comicapparition, index) => {
             return (

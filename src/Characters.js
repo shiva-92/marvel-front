@@ -16,12 +16,6 @@ const Characters = ({ tab, setTab }) => {
   const handleTabfavori = (character) => {
     const newtabdetailperso = [...tabdetailperso];
 
-    //si tu met croixvalue en state, ca va faire ca pour toutes les cases
-    //si tu met conditonelle et croixvalue ca va le faire pour chacun qui se trouve dans le tableau
-    //pour cibler un particulièrement, récupérer index issu du tableau et qu'on a mis ds le map, modifier contenu de cet index, quand on va le maper, ca va être différent, map il reflete uniquement
-    //tu vas grefer à chaque truc ajouté, une clé
-
-    //ca tu vas le faire à chaque case
     newtabdetailperso.push({
       characteridentifiant: character._id,
       characterdetail: character.description,
@@ -49,10 +43,8 @@ const Characters = ({ tab, setTab }) => {
     <span>En cours de chargement...</span>
   ) : (
     <>
-      <div className="soussection">
-        {/* //skip c'est la quantité */}
-
-        <div className="centersoussection">
+      <div className="search">
+        <div className="centersearch">
           {skip - 100 >= 0 && (
             <>
               <button
@@ -68,7 +60,7 @@ const Characters = ({ tab, setTab }) => {
           )}
 
           <input
-            className="nopreviousinput"
+            className="input"
             placeholder="Cherche ton super-héros favori !"
             onChange={(event) => {
               setCharacter(event.target.value);
@@ -77,7 +69,7 @@ const Characters = ({ tab, setTab }) => {
 
           <>
             <button
-              className="nextpageinitial"
+              className="nextpage"
               onClick={() => {
                 setSkip(skip + 100);
               }}
@@ -91,15 +83,11 @@ const Characters = ({ tab, setTab }) => {
 
       <div className="container">
         <>
-          {/* //chaque element il va faire toutes les instructions qu'il y a dedans */}
-          {/* //n'oublie pas de penser en json tt le temps, tu dois reconsiderer chaque chaque case et check la conditionnelle */}
-
           {data.results.map((character, index) => {
             console.log(skip);
 
             return (
               <>
-                {/* //groupe = chaque case avec un perso */}
                 <div className="group">
                   <div className="charactercontainer">
                     <div className="charactertext">
@@ -131,18 +119,13 @@ const Characters = ({ tab, setTab }) => {
                         <button
                           className="ensavoirplus"
                           onClick={() => {
-                            //tu alimentes tableaufavori state (variable) avec id du perso favori
                             handleTabfavori(character);
                           }}
                         >
                           En savoir plus
-                          {/* //en cliquant en savoir plus sur le character tu alimtes un tableau et tu map dessus */}
                         </button>
                       )}
 
-                      {/* //chaque case (group en jaune) va faire instructions en bas */}
-
-                      {/* //la on se fie a ce qu'il y a dans le tableau tabdetailperso qu'on a alimenté, valeur des clés  */}
                       {tabdetailperso.map((detailcharacter, index) => {
                         if (
                           detailcharacter.characterdetail &&
