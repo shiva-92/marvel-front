@@ -103,7 +103,7 @@ const Comics = ({ tab, setTab }) => {
                     <FontAwesomeIcon
                       className="coeur"
                       icon={faHeart}
-                      size="2x"
+                      size="1x"
                     ></FontAwesomeIcon>
                   </button>
 

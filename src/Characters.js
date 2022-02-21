@@ -107,7 +107,7 @@ const Characters = ({ tab, setTab }) => {
                         <FontAwesomeIcon
                           className="coeur"
                           icon={faHeart}
-                          size="2x"
+                          size="1x"
                         ></FontAwesomeIcon>
                       </button>
 
@@ -154,7 +154,6 @@ const Characters = ({ tab, setTab }) => {
                     </div>
                   </div>
 
-                  {/* //tu vas faire ca à chaque case */}
                   <Link to={`/id/${character._id}`}>
                     <img
                       className="picturecharacter"

@@ -106,6 +106,8 @@
   font-size: x-small;
 }
 
+/*CHARACTER*/
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -120,35 +122,8 @@
   flex-direction: column;
   justify-content: space-between;
   width: 15%;
-  height: 500px;
   position: relative;
-  margin-bottom: 25px;
-}
-
-.groupcomic {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 15%;
-  height: 500px;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.boutonfirstpage {
-  margin-top: 50px;
-  background-color: purple;
-  width: 300px;
-}
-
-.nextprevious {
-  width: 400px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: large;
-  border: 3px solid black;
-  height: 50px;
-  background-color: red;
+  margin-bottom: 20px;
 }
 
 .charactertext {
@@ -156,18 +131,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-}
-
-.descriptioncharacter {
-  background-color: rgb(0, 0, 0, 0.7);
-  height: 500px;
-  position: absolute;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: x-large;
-  border-radius: 15px;
 }
 
 .charactername {
@@ -187,19 +150,6 @@
   padding-top: 3px;
 }
 
-.ensavoirplus {
-  background-color: red;
-  position: absolute;
-  margin-top: 450px;
-  text-align: center;
-  height: 30px;
-  width: 150px;
-  margin-left: 20px;
-  text-align: center;
-  font-weight: bold;
-  font-size: large;
-}
-
 .character {
   display: flex;
   flex-direction: column;
@@ -210,39 +160,78 @@
 .picturecharacter {
   width: 100%;
   object-fit: cover;
-  height: 500px;
+  height: 300px;
   border-radius: 15px;
   box-shadow: 3px 3px 3px black;
+}
+
+.ensavoirplus {
+  background-color: red;
+  position: absolute;
+  margin-top: 260px;
+  text-align: center;
+  height: 30px;
+  width: 125px;
+  margin-left: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+.descriptioncharacter {
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 300px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  border-radius: 15px;
 }
 
 .closebutton {
   background-color: grey;
   position: absolute;
-  margin-top: 450px;
-  text-align: left;
+  margin-top: 260px;
+  text-align: center;
   height: 30px;
-  width: 150px;
-  margin-left: 20px;
+  width: 125px;
+  margin-left: 15px;
   text-align: center;
   font-weight: bold;
-  font-size: large;
+  font-size: medium;
+  border-radius: 10px;
 }
 
 .favoritebouton {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  margin-left: 250px;
   margin-top: 35px;
   position: absolute;
   z-index: 2;
   border-radius: 50%;
   border: 1px red;
   background-color: black;
+  margin-left: 390px;
 }
 
 :hover.favoritebouton {
   background-color: red;
+}
+
+/*COMICS*/
+
+.groupcomic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15%;
+  height: 300px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .comic {
@@ -274,61 +263,74 @@ img {
 }
 
 .comictitle {
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
   background-color: black;
   color: white;
   z-index: 1;
   position: absolute;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   padding-bottom: 3px;
   padding-top: 3px;
 }
 
-/* page comic */
 .imagecomic {
   width: 100%;
-  object-fit: fill;
-  height: 500px;
+  object-fit: cover;
+  height: 300px;
   border-radius: 15px;
   box-shadow: 3px 3px 3px black;
 }
 
 .comicdescription {
   background-color: rgb(0, 0, 0, 0.7);
-  height: 500px;
+  height: 300px;
   position: absolute;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: small;
   border-radius: 15px;
 }
 
+/*COMIC ID*/
+
+.amountcomicrelated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 150px auto 30px;
+  background-color: black;
+}
+
 .groupid {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   margin-bottom: 20px;
-  height: 600px;
-  border: 5px solid black;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px grey;
 }
 
 .leftbloc {
-  background-color: blue;
   width: 30%;
 }
 
 .piccomicrelated {
   object-fit: fill;
-  height: 600px;
+  height: 400px;
   width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .rightbloc {
@@ -336,18 +338,20 @@ img {
 }
 
 .titlecomicrelated {
-  font-size: 40px;
+  font-size: 20px;
+  font-weight: bold;
   color: white;
   background-color: red;
   margin-left: 20px;
   padding-left: 20px;
   padding-bottom: 15px;
   padding-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border-top-right-radius: 15px;
 }
 
 .descriptioncomicrelated {
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 20px;
 }
 
@@ -360,42 +364,39 @@ img {
   justify-content: space-between;
 }
 
-.amountcomicrelated {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  background-color: black;
-  color: white;
-  width: 60%;
-  margin: 150px auto 30px;
-  background-color: red;
-}
+/*FAVORIS*/
 
 .divfavori {
-  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  margin: 80px auto 30px;
+  margin: 80px auto;
 }
 
 .favori {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 320px;
-  height: 500px;
+  width: 200px;
+  height: 300px;
   position: relative;
   margin-bottom: 20px;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+.imagefavorite {
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px black;
 }
 
 .favoritecharactername {
   background-color: black;
   color: white;
-  font-size: large;
+  font-size: medium;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -411,37 +412,28 @@ img {
 .favoritecomictitle {
   background-color: black;
   color: white;
-  font-size: large;
+  font-size: small;
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   padding-bottom: 3px;
   padding-top: 3px;
 }
 
-.imagefavorite {
-  object-fit: cover;
-  height: 500px;
-  width: 100%;
-  border-radius: 15px;
-}
-
 .deletefavorite {
   position: absolute;
   z-index: 1;
-  margin-top: 450px;
+  margin-top: 260px;
   margin-left: 20px;
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
-  width: 150px;
+  width: 120px;
   height: 30px;
   background-color: red;
+  border-radius: 10px;
 }
 
 .globalfavori {
@@ -449,7 +441,7 @@ img {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
-  padding-left: 50px;
-  padding-right: 50px;
   margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
