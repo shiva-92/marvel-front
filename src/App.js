@@ -6,6 +6,7 @@ import Characters from "./Characters";
 import Id from "./Id";
 import Favoris from "./Favoris";
 import Header from "./Header";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const initialtab = localStorage.getItem("favorite")

@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faAngleRight,
+  faAngleLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Comics = ({ tab, setTab }) => {
   const [data, setData] = useState({});

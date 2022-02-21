@@ -8,16 +8,14 @@ const Header = ({ token, setUser, title, setTitle }) => {
   return (
     <>
       <div className="globalheader">
-        <div className="headerlogo">
-          <button
-            className="boutonlogo"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            <img src={logo} />
-          </button>
-        </div>
+        <button
+          className="boutonlogo"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <img className="imagelogo" src={logo} />
+        </button>
 
         <div className="boutonsheader">
           <button

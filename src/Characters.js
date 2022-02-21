@@ -52,8 +52,12 @@ const Characters = ({ tab, setTab }) => {
                 setSkip(skip - 100);
               }}
             >
-              <span>PAGE PRECEDENTE</span>
-              <FontAwesomeIcon icon={faAngleLeft} size="2x" />
+              <span className="previouspagetext">PAGE PRECEDENTE</span>
+              <FontAwesomeIcon
+                className="previoussign"
+                icon={faAngleLeft}
+                size="2x"
+              />
             </button>
           </>
         )}
@@ -74,7 +78,7 @@ const Characters = ({ tab, setTab }) => {
             }}
           >
             <FontAwesomeIcon icon={faAngleRight} size="2x" />
-            <span>PAGE SUIVANTE</span>
+            <span className="nextpagetext">PAGE SUIVANTE</span>
           </button>
         </>
       </div>
