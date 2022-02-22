@@ -650,20 +650,14 @@ img {
     margin-left: -95px;
   }
 
+  .previouspagetext {
+    display: none;
+  }
+
   .nextpage {
     color: black;
     margin-top: 0px;
     margin-left: 235px;
-  }
-
-  .nextsign {
-    color: black;
-    margin-top: 0px;
-    margin-left: 235px;
-  }
-
-  .previouspagetext {
-    display: none;
   }
 
   .nextpagetext {
