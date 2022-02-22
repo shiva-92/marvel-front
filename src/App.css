@@ -484,7 +484,6 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
   }
 
   .charactername {
@@ -565,9 +564,7 @@ img {
   .favoritebouton {
     width: 25px;
     height: 25px;
-    position: absolute;
     margin-top: 35px;
-    position: absolute;
     z-index: 2;
     border-radius: 50%;
     border: 1px red;
@@ -627,13 +624,10 @@ img {
 
   .search {
     width: 80%;
-    display: flex;
     height: 120px;
-    margin-right: 45px;
-    margin-top: 100px;
+    margin-right: 40px;
+    margin-top: 150px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .input {
@@ -650,8 +644,8 @@ img {
   .previouspage {
     color: red;
     border: none;
-    margin-top: 175px;
-    margin-left: 295px;
+    margin-top: 0px;
+    margin-left: -65px;
   }
 
   .nextpagetext {
@@ -659,8 +653,8 @@ img {
   }
 
   .nextpage {
-    margin-top: 175px;
-    margin-left: 525px;
+    margin-top: 0px;
+    margin-left: 235px;
   }
 
   .previouspagetext {
@@ -774,7 +768,7 @@ img {
   .imagefavorite {
     width: 100%;
     object-fit: cover;
-    height: 350px;
+    height: 300px;
     border-radius: 15px;
     box-shadow: 3px 3px 3px black;
   }
