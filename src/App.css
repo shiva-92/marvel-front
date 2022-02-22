@@ -17,7 +17,7 @@
   box-shadow: 1px 1px 1px grey;
 }
 
-.boutonsheader {
+.navigation {
   width: 35%;
   display: flex;
   height: 80px;
@@ -468,7 +468,7 @@ img {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    margin: 150px auto;
+    margin: 210px auto;
   }
 
   .group,
@@ -551,14 +551,14 @@ img {
   .closebutton {
     background-color: grey;
     position: absolute;
-    margin-top: 260px;
+    margin-top: 270px;
     text-align: center;
-    height: 30px;
-    width: 125px;
+    height: 20px;
+    width: 115px;
     margin-left: 15px;
     text-align: center;
     font-weight: bold;
-    font-size: medium;
+    font-size: small;
     border-radius: 10px;
   }
 
@@ -585,15 +585,29 @@ img {
     width: 100%;
     height: 150px;
     box-shadow: 1px 1px 1px grey;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .boutonsheader {
+  .boutonlogo {
+    border: none;
+    width: 100%;
+    margin: auto;
+  }
+  .imagelogo {
+    width: 100%;
+  }
+
+  .navigation {
     width: 100%;
     display: flex;
     height: 30px;
     justify-content: space-around;
-    margin-top: 80px;
-    margin-left: -200px;
+    margin-top: -10px;
+    margin-left: 0px;
   }
 
   .characters,
@@ -608,18 +622,9 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     width: 30%;
+    background-color: black;
   }
 
-  .boutonlogo {
-    background-color: transparent;
-    border: none;
-  }
-
-  .imagelogo {
-    width: 120px;
-    margin-bottom: 70px;
-    margin-left: 80px;
-  }
   .search {
     right: 0;
     top: 0;
@@ -641,21 +646,15 @@ img {
     height: 20px;
     margin-left: 400px;
     margin-right: 100px;
-    margin-top: 70px;
+    margin-top: 175px;
     background-color: white;
   }
 
   .previouspage {
     color: red;
     border: none;
-    margin-top: 70px;
+    margin-top: 175px;
     margin-left: 295px;
-    width: 170px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
   }
 
   .nextpagetext {
@@ -663,7 +662,7 @@ img {
   }
 
   .nextpage {
-    margin-top: 70px;
+    margin-top: 175px;
     margin-left: 525px;
   }
 
@@ -743,5 +742,97 @@ img {
     font-size: small;
     border-radius: 10px;
     margin-bottom: 20px;
+  }
+
+  /*FAVORIS*/
+
+  .testfavori {
+    margin-top: 200px;
+    font-size: xx-large;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+  }
+  .divfavori {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+  .favori {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  .imagefavorite {
+    width: 100%;
+    object-fit: cover;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px black;
+  }
+
+  .favoritecharactername {
+    background-color: black;
+    color: white;
+    font-size: medium;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    font-weight: bold;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  .favoritecomictitle {
+    background-color: black;
+    color: white;
+    font-size: small;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+  }
+
+  .deletefavorite {
+    background-color: red;
+    position: absolute;
+    margin-top: 270px;
+    text-align: center;
+    height: 20px;
+    width: 115px;
+    margin-left: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 10px;
+  }
+
+  .globalfavori {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

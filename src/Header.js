@@ -17,7 +17,7 @@ const Header = ({ token, setUser, title, setTitle }) => {
           <img className="imagelogo" src={logo} />
         </button>
 
-        <div className="boutonsheader">
+        <div className="navigation">
           <button
             className="characters"
             onClick={() => {
