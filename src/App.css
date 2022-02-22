@@ -563,8 +563,8 @@ img {
   }
 
   .favoritebouton {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     margin-top: 35px;
     position: absolute;
@@ -572,7 +572,7 @@ img {
     border-radius: 50%;
     border: 1px red;
     background-color: black;
-    margin-left: 120px;
+    margin-left: 130px;
   }
 
   :hover.favoritebouton {
@@ -583,7 +583,7 @@ img {
 
   .globalheader {
     width: 100%;
-    height: 150px;
+    height: 130px;
     box-shadow: 1px 1px 1px grey;
     background-color: red;
     display: flex;
@@ -598,7 +598,7 @@ img {
     margin: auto;
   }
   .imagelogo {
-    width: 100%;
+    width: 50%;
   }
 
   .navigation {
@@ -626,28 +626,25 @@ img {
   }
 
   .search {
-    right: 0;
-    top: 0;
-    width: 680px;
+    width: 80%;
     display: flex;
     height: 120px;
-    z-index: 3;
-    position: fixed;
-    justify-items: flex-end;
+    margin-right: 45px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .input {
-    width: 180px;
     border-radius: 15px;
     text-align: center;
     font-size: xx-small;
     font-weight: bold;
     border: 1px solid black;
     height: 20px;
-    margin-left: 400px;
-    margin-right: 100px;
-    margin-top: 175px;
     background-color: white;
+    margin: 0 auto;
   }
 
   .previouspage {
