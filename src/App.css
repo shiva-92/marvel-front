@@ -340,6 +340,9 @@ img {
 
 .rightbloc {
   flex: 1;
+  background-color: black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .titlecomicrelated {
@@ -347,7 +350,6 @@ img {
   font-weight: bold;
   color: white;
   background-color: red;
-  margin-left: 20px;
   padding-left: 20px;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -358,6 +360,8 @@ img {
 .descriptioncomicrelated {
   font-size: 20px;
   margin-left: 20px;
+  margin-right: 25px;
+  color: white;
 }
 
 .containercomicrelated {
@@ -652,6 +656,12 @@ img {
     margin-left: 235px;
   }
 
+  .nextsign {
+    color: black;
+    margin-top: 0px;
+    margin-left: 235px;
+  }
+
   .previouspagetext {
     display: none;
   }
@@ -669,10 +679,12 @@ img {
     font-size: 15px;
     background-color: black;
     color: white;
-    width: 70%;
+    width: 80%;
     height: 50px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .groupid {
