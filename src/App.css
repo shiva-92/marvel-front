@@ -637,7 +637,6 @@ img {
     font-weight: bold;
     border: 1px solid black;
     height: 20px;
-    background-color: white;
     margin: 0 auto;
   }
 
@@ -645,7 +644,7 @@ img {
     color: red;
     border: none;
     margin-top: 0px;
-    margin-left: -65px;
+    margin-left: -95px;
   }
 
   .nextpagetext {
@@ -654,7 +653,7 @@ img {
 
   .nextpage {
     margin-top: 0px;
-    margin-left: 0x;
+    margin-left: 235px;
     color: red;
     border: none;
   }
