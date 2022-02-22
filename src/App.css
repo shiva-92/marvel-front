@@ -642,14 +642,12 @@ img {
 
   .previouspage {
     color: black;
-    border: none;
     margin-top: 0px;
     margin-left: -95px;
   }
 
   .nextpage {
     color: black;
-    border: none;
     margin-top: 0px;
     margin-left: 235px;
   }
