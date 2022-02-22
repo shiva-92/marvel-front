@@ -641,25 +641,17 @@ img {
   }
 
   .previouspage {
-    color: red;
+    color: black;
     border: none;
     margin-top: 0px;
     margin-left: -95px;
   }
 
-  .nextpagetext {
-    display: none;
-  }
-
   .nextpage {
+    color: black;
+    border: none;
     margin-top: 0px;
     margin-left: 235px;
-    color: red;
-    border: none;
-  }
-
-  .previouspagetext {
-    display: none;
   }
 
   /*COMIC ID*/
