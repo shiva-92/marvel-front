@@ -56,7 +56,6 @@
   width: 680px;
   display: flex;
   height: 120px;
-  z-index: 3;
   position: fixed;
   justify-items: flex-end;
 }
