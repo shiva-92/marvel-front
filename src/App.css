@@ -642,12 +642,13 @@ img {
     border: 1px solid black;
     height: 20px;
     margin: 0 auto;
+    width: 150px;
   }
 
   .previouspage {
     color: black;
     margin-top: 0px;
-    margin-left: -95px;
+    margin-left: -50px;
   }
 
   .previouspagetext {
@@ -657,7 +658,7 @@ img {
   .nextpage {
     color: black;
     margin-top: 0px;
-    margin-left: 235px;
+    margin-left: 205px;
   }
 
   .nextpagetext {
