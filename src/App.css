@@ -654,6 +654,14 @@ img {
     margin-left: 235px;
   }
 
+  .previouspagetext {
+    display: none;
+  }
+
+  .nextpagetext {
+    display: none;
+  }
+
   /*COMIC ID*/
 
   .amountcomicrelated {
