@@ -23,7 +23,6 @@
   height: 80px;
   justify-content: space-between;
   margin-left: 100px;
-  background-color: green;
 }
 
 .characters,
@@ -332,7 +331,7 @@ img {
 }
 
 .piccomicrelated {
-  object-fit: fill;
+  object-fit: cover;
   height: 400px;
   width: 100%;
   border-top-left-radius: 15px;
@@ -468,7 +467,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: green;
     width: 100%;
     margin: 150px auto;
   }
@@ -525,14 +523,14 @@ img {
   .ensavoirplus {
     background-color: red;
     position: absolute;
-    margin-top: 260px;
+    margin-top: 270px;
     text-align: center;
-    height: 30px;
-    width: 125px;
+    height: 20px;
+    width: 115px;
     margin-left: 15px;
     text-align: center;
     font-weight: bold;
-    font-size: medium;
+    font-size: small;
     border-radius: 10px;
   }
 
@@ -647,24 +645,11 @@ img {
     background-color: white;
   }
 
-  .nextpage {
-    color: red;
-    border: none;
-    margin-top: 45px;
-    margin-left: 465px;
-    width: 150px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-  }
-
   .previouspage {
     color: red;
     border: none;
-    margin-top: 45px;
-    margin-left: 20px;
+    margin-top: 70px;
+    margin-left: 295px;
     width: 170px;
     position: absolute;
     display: flex;
@@ -673,8 +658,17 @@ img {
     background-color: transparent;
   }
 
+  .nextpagetext {
+    display: none;
+  }
+
   .nextpage {
-    margin-left: -490px;
+    margin-top: 70px;
+    margin-left: 525px;
+  }
+
+  .previouspagetext {
+    display: none;
   }
 
   /*COMIC ID*/
@@ -687,7 +681,6 @@ img {
     background-color: black;
     color: white;
     width: 70%;
-    background-color: black;
     height: 50px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -695,16 +688,15 @@ img {
 
   .groupid {
     width: 100%;
-    margin: 0 auto;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     height: 400px;
     border-radius: 15px;
     box-shadow: 2px 2px 2px grey;
   }
 
   .leftbloc {
-    width: 30%;
+    width: 40%;
   }
 
   .piccomicrelated {
@@ -720,29 +712,36 @@ img {
   }
 
   .titlecomicrelated {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: small;
     color: white;
-    background-color: red;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    margin-bottom: 10px;
     border-top-right-radius: 15px;
   }
 
   .descriptioncomicrelated {
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: small;
+    margin-right: 20px;
   }
 
   .containercomicrelated {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-left: 70px;
-    margin-right: 70px;
-    justify-content: space-between;
+    margin-left: 0px;
+    width: 100%;
+    margin-right: 100px;
+  }
+
+  .deletefavorite {
+    background-color: red;
+    position: absolute;
+    margin-top: 270px;
+    text-align: center;
+    height: 20px;
+    width: 115px;
+    margin-left: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
 }

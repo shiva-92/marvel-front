@@ -54,7 +54,7 @@ const Comics = ({ tab, setTab }) => {
                 console.log(skip);
               }}
             >
-              <span>PAGE PRECEDENTE</span>
+              <span className="previouspagetext">PAGE PRECEDENTE</span>
 
               <FontAwesomeIcon icon={faAngleLeft} size="2x" />
             </button>
@@ -76,7 +76,7 @@ const Comics = ({ tab, setTab }) => {
             }}
           >
             <FontAwesomeIcon icon={faAngleRight} size="2x" />
-            <span>PAGE SUIVANTE</span>
+            <span className="nextpagetext">PAGE SUIVANTE</span>
           </button>
         </>
       </div>

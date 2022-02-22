@@ -53,11 +53,7 @@ const Characters = ({ tab, setTab }) => {
               }}
             >
               <span className="previouspagetext">PAGE PRECEDENTE</span>
-              <FontAwesomeIcon
-                className="previoussign"
-                icon={faAngleLeft}
-                size="2x"
-              />
+              <FontAwesomeIcon icon={faAngleLeft} size="2x" />
             </button>
           </>
         )}
