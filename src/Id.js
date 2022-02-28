@@ -20,7 +20,6 @@ const Id = () => {
       const response = await axios.get(
         `https://backendmarvelok.herokuapp.com/id?id=${id}`
       );
-      //on met dans la variable data via setData, le json
       setData(response.data);
       setIsLoading(false);
       console.log(response.data);
@@ -33,7 +32,6 @@ const Id = () => {
   ) : (
     <>
       <div className="amountcomicrelated">
-        {/* //a l'interieur de data le contenu json */}
         <span></span>
         {`${data.name}` +
           ` apparaît dans ` +

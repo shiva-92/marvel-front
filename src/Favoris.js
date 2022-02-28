@@ -45,10 +45,8 @@ const Favoris = ({ tab, setTab }) => {
                     onClick={() => {
                       const newtab = [...tab];
                       newtab.splice(newtab.indexOf(newtab[index]), 1);
-                      //tab[i]le contenu pris par i dans le tableau
 
                       setTab(newtab);
-                      // console.log(tabdetailperso);
                     }}
                   >
                     Supprimer
